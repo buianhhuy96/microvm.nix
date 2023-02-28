@@ -82,7 +82,7 @@ in {
       # "-enable-kvm"
       "-machine" "virt,accel=kvm"
       "-nodefaults" "-no-user-config"
-      "-nographic"
+      "-device" "virtio-gpu-pci"
       # qemu just hangs after shutdown, allow to exit by rebooting
       "-no-reboot"
       "-serial" "null"
