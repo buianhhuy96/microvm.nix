@@ -100,7 +100,7 @@ in {
       "-kernel" "${kernelPath}"
       # hvc1 precedes hvc0 so that nixos starts serial-agetty@ on both
       # without further config
-      "-append" "console=hvc0 earlyprintk=ttyS0 console=ttyS0 reboot=t panic=-1 ${toString microvmConfig.kernelParams}"
+      "-append" "console=hvc0 earlyprintk=ttyS0 console=ttyS0 reboot=t panic=-1 pci=nomsi ${toString microvmConfig.kernelParams}"
     ] ++
     lib.optionals (system == "x86_64-linux") [
       "-cpu" "host,+x2apic"
