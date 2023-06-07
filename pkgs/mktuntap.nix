@@ -6,7 +6,7 @@ stdenv.mkDerivation {
 
   src = fetchgit {
     url = "https://spectrum-os.org/git/mktuntap";
-    sha256 = "sha256-r1m5jYPy2Z+B2cn12e7XnUxUXw6bOXeEHdU25fqR/W4=";
+    sha256 = "sha256-kKn6p9uY5GHV/bLakuCC1WR2BO/M/4xrAdqoeT9EcfU=";
   };
 
   makeFlags = [ "prefix=${placeholder "out"}" ];
